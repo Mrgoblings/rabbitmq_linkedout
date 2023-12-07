@@ -1,0 +1,45 @@
+version: '2'
+services:
+  rabbitmq-server-app:
+    build: ./backend/rabbitmq
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rabbitmq
+
+  mysql-server-app:
+    build: ./backend/signin_signup
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mysql
+
+  website:
+    build: ./website
+    ports:
+      - "80:80"
+    depends_on:
+      - rabbitmq-server-app
+      - mysql-server-app
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"  
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "root_password"
+      MYSQL_DATABASE: "linkedout"
+      MYSQL_USER: "linkedout_user"
+      MYSQL_PASSWORD: "linkedout_password"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

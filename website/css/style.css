@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.body {
+  background-color: #f3f2ef;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 0;
+}
+
+.navbarbg {
+  background-color: #fff;
+}
+
+.searche {
+  width: 350px;
+  border-radius: 30px;
+}
+
+/* Post Component Styles */
+.post-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.post-text {
+  font-size: 15px;
+  color: black;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-footer {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* Button Styles */
+.btn-light {
+  background-color: #f3f2ef;
+}
+
+/* Media Button Styles */
+.mediabtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0073b1;
+  border: 1px solid #0073b1;
+  cursor: pointer;
+}
+
+.mediatext {
+  margin-left: 5px;
+}
+
+/* Reference Button Styles */
+.ref {
+  color: #0073b1;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .searche {
+    width: 100%;
+  }
+}
+
+#postContainer{
+  margin-top: 20px;
+  min-width: 528px;
+}
